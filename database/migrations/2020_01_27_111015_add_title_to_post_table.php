@@ -14,7 +14,7 @@ class AddTitleToPostTable extends Migration
     public function up()
     {
         Schema::table('post', function (Blueprint $table) {
-            //
+            $table->string('title');
         });
     }
 
