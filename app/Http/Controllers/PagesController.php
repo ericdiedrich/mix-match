@@ -13,6 +13,9 @@ class PagesController extends Controller
         return view('pages.index')->with('title', $title);
     }
 
+    public function dashboard() {
+        return view('pages.dashboard');
+    }
     
     public function register() {
         $title = "Please Register here!!!";
@@ -37,6 +40,13 @@ class PagesController extends Controller
 
         $post = Post::where('slug', $slug)->firstOrFail();
         
-        return view('pages.posts')->with('post', $post);
+        return view('pages.post')->with('post', $post);
+
+        // $post = \DB::table('posts')->where('slug', $slug)->first();
+
+        // return view('post', [
+        //     'post' => $post
+        // ]);
+
     }
 }

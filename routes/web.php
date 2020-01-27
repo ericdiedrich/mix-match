@@ -14,8 +14,9 @@ Route::get('/', 'PagesController@index');
 Route::get('/register', 'PagesController@register');
 Route::get('/login', 'PagesController@login');
 Route::get('/services', 'PagesController@services');
-Route::get('/posts/{post}', 'PagesController@posts');
+Route::get('/dashboard', 'PagesController@dashboard');
 
+Route::get('/posts/{post}', 'PagesController@posts');
 
 // Route::get('/', function () {
 //     return view('index');
